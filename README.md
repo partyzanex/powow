@@ -64,3 +64,31 @@ for client:
 ```shell
 docker run --rm --network=host partydev/powow-client:latest
 ```
+
+## Client usage
+
+```shell
+go get github.com/partyzanex/powow@latest
+```
+
+code:
+```go
+import (
+    "context"
+    "fmt"
+    "log"
+    
+    "github.com/partyzanex/powow/pkg/client"
+)
+
+func main {
+    cli := client.NewClient(":7700")
+    quote, err := cli.GetRandomWisdom(context.Background())
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    fmt.Printf("Quote: %s\nAuthor: %s\n", quote.Content, quote.Author)
+}
+
+```
