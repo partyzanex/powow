@@ -1,0 +1,13 @@
+@startuml
+
+control Client as client
+control Server as server
+
+client -> server: create TCP connection
+server -> client: send challenge task
+client -> client: execute task
+client -> server: send task result to server
+server -> server: verify task result
+server -> client: send quote
+
+@enduml
