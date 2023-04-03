@@ -3,7 +3,7 @@
 **Powow** is a "Word of Wisdom" server written in Go. 
 Implements challenge-response based Proof-of-Work protocol for DDoS protection.
 
-The health check is implemented based on the [argon2](https://pkg.go.dev/golang.org/x/crypto/argon2) library.
+The PoW challenge is based on the [argon2](https://pkg.go.dev/golang.org/x/crypto/argon2) library.
 When the load metrics increase, the complexity of the challenge increases.
 
 ![sequence diagram](./docs/sequense.png)
